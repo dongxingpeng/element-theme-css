@@ -1,12 +1,13 @@
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ElementCssReplaced = require("../index");
+const ElementCssReplaced = require("./index");
+const resolve = (url) => path.resolve(__dirname, url);
 module.exports = {
-  context:__dirname,
-  mode: "production",
+  context: __dirname,
   entry: "./main",
   output: {
     filename: "app.js",
-    path: __dirname + '/dist',
+    path: resolve("dist"),
   },
   module: {
     rules: [
@@ -18,7 +19,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
           },
         ],
       },
@@ -26,7 +27,7 @@ module.exports = {
         test: /\.(ttf|eot|svg|woff|woff2)$/i,
         use: [
           {
-            loader: 'url-loader',
+            loader: "url-loader",
             options: {
               limit: 8192,
             },
@@ -37,9 +38,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Example",
-      filename: "index.html",
+      filename:'index.html',
+      template:'index.html',
     }),
     new ElementCssReplaced(),
   ],
+  devServer: {
+    port: "8089",
+  },
 };

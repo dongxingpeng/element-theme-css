@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root{
+      --primary:#409EFF;
+      --primary10: #53a8ff;
+      --primary20: #66b1ff;
+      --primary30: #79bbff;
+      --primary40: #8cc5ff;
+      --primary50: #a0cfff;
+      --primary60: #b3d8ff;
+      --primary70: #c6e2ff;
+      --primary80: #d9ecff;
+      --primary90: #ecf5ff;
+    }
+    #app{
+      color: var(--primary);
+    }
+    .color-box{
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin: 0 5px;
+      border: 1px solid saddlebrown;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div>{{message}}</div>
+    <div>
+      <span class="color-box" :style="{backgroundColor:color}"  v-for="color in colors" @click="chnageColor(color)"></span>
+    </div>
+  </div>
+</body>
+</html>
