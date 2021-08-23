@@ -6,12 +6,8 @@
 ## 使用说明
 ```
 <!-- webpack插件引入 -->
-<!-- primary代表的是变量名,可省略不写,可以自定义,默认primary -->
+<!-- primary代表的是变量名,默认primary -->
 new ElementCssReplaced();
-<!-- OR -->
-new ElementCssReplaced({
-  primary:"primary"
-});
 <!-- 另外，在lib文件下提供setTheme方法，来进行更换主题 -->
 <!-- 引入 -->
 import {setTheme} from "element-theme-css/lib";
