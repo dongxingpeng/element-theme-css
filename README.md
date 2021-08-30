@@ -11,5 +11,5 @@ new ElementCssReplaced();
 <!-- 另外，在lib文件下提供setTheme方法，来进行更换主题 -->
 <!-- 引入 -->
 import {setTheme} from "element-theme-css/lib";
-<!-- 设置颜色 十六进制-->
+<!-- 使用设置颜色 #000 #000000 red -->
 setTheme("#000000");
