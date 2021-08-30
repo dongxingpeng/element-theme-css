@@ -16,5 +16,5 @@
 // color-white #FFFFFF
 // color-black #000000
 // background-color-base #F5F7FA
-const primary = ["primary10", "primary20", "primary30", "primary40", "primary50", "primary60", "primary70", "primary80", "primary90"];
+const primary = ["primary","primary10", "primary20", "primary30", "primary40", "primary50", "primary60", "primary70", "primary80", "primary90"];
 export default primary
